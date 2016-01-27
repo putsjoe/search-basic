@@ -19,9 +19,10 @@ function run() {
         if (schar == dchar && ssize == dsize)
         {
                     console.log(search);
-                    var found = new Film(search);
+                    var found = new Item(search);
                     found.init();
-        }   
+        }
+           
     }  
 } 
 
@@ -34,32 +35,32 @@ function format(a) {
         a.style.paddingTop = "1%";    
 }
 
-function Film (name) {
+function Item (name) {
     this.name = name;
     this.init = function() {
         var result = document.getElementById("result");
         
-        var film = document.createElement('div');
-        film.id = this.name;
-        format(film);
+        var item = document.createElement('div');
+        item.id = this.name;
+        format(item);
         
-        result.insertBefore(film, result.firstChild);
-        var film = document.getElementById(this.name);
-        film.innerHTML = this.name;
+        result.insertBefore(item, result.firstChild);
+        var item = document.getElementById(this.name);
+        item.innerHTML = this.name;
         
         
     }
     this.none = function() {
         var result = document.getElementById("result");
         
-        var film = document.createElement('div');
-        film.id = "none";
-        format(film);
+        var item = document.createElement('div');
+        item.id = "none";
+        format(item);
         
-        result.insertBefore(film, result.firstChild);
+        result.insertBefore(item, result.firstChild);
         
-        var film = document.getElementById(film.id);
-        film.innerHTML = "No results found";
+        var item = document.getElementById(item.id);
+        item.innerHTML = "No results found";
         
     }
     
