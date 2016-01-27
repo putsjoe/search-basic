@@ -25,23 +25,23 @@ function run() {
     }  
 } 
 
-function Film (name) {
-    this.name = name;
-    this.init = function() {
-        var result = document.getElementById("result");
-        
-        //   // Clear other results
-        //while ( result.firstChild ) result.removeChild( result.firstChild );
-        
-        var film = document.createElement('div');
-        film.id = this.name;
-        
+function format(film) {
         film.style.width = "100%";
         film.style.height = "20%";
         film.style.border = "red solid 2px";
         film.style.paddingLeft = "10%";
         film.style.textAlign = "left";
-        film.style.paddingTop = "1%";
+        film.style.paddingTop = "1%";    
+}
+
+function Film (name) {
+    this.name = name;
+    this.init = function() {
+        var result = document.getElementById("result");
+        
+        var film = document.createElement('div');
+        film.id = this.name;
+        format(film);
         
         result.insertBefore(film, result.firstChild);
         var film = document.getElementById(this.name);
@@ -54,13 +54,7 @@ function Film (name) {
         
         var film = document.createElement('div');
         film.id = "none";
-        
-        film.style.width = "100%";
-        film.style.height = "20%";
-        film.style.border = "red solid 2px";
-        film.style.paddingLeft = "10%";
-        film.style.textAlign = "left";
-        film.style.paddingTop = "1%";
+        format(film);
         
         result.insertBefore(film, result.firstChild);
         
