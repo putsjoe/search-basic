@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Rater </title>
+<script src="script.js"> </script>
+<style>
+div#rside, div#main {  
+    border: solid black 1px;
+    height: 100%;
+    width: 100%;
+}
+
+div#rside {
+    float: right;
+    width: 21%;
+}
+
+div#main {
+    float: left;
+    width: 78%;
+}
+
+div#srch { 
+    padding-left: 10%; 
+    padding-top: 5%;
+}
+
+input#search {
+    width: 80%;
+    height: 10%;
+    font-size: 30;
+    text-align: center;
+}
+
+div#result { 
+    width: 70%;
+    word-wrap: break-word;
+    height: 40%;
+    font-size: 20;
+    text-align: center;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="main">
+
+<div id="srch">
+<!-- <input id="search" onkeydown="if (event.keyCode == 13) run();" maxlength="45"> </input> -->
+<input id="search" onkeyup="trun();" maxlength="45"> </input>
+</div>
+
+<div id="result"> </div>
+
+</div>
+
+<div id="rside">
+</div>
+
+</body>
+<script>
+document.getElementById("search").focus();
+</script>
+</html>
+
+
