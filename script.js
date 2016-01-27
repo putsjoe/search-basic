@@ -2,7 +2,7 @@
 var dats = ["hello", "hell", "he", "hel", "hatchit", "hhh"];
 console.log(dats);
 
-function trun() {
+function run() {
     var search = document.getElementById("search").value.toLowerCase();
     
     var datsLength = dats.length;
