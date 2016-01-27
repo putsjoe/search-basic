@@ -23,45 +23,6 @@ function trun() {
                     found.init();
         }   
     }  
-}
-
-function run() {
-    
-    var preitem = document.getElementById("search").value;
-    document.getElementById("search").value = "";
-    
-    var item = preitem.split(' ').join('+'); 
-    
-    console.log(item);
-    
-    var search = new XMLHttpRequest();
-    var url = "http://omdbapi.com/?"
-    
-    var vars = "t="+item+"&plot=short&r=json";
-    search.open("GET", url+vars, true);
-    //search.setRequestHeader("Content-type",   "application/x-www-form-urlencoded");
-    
-    console.log(url+vars);
-    
-    search.onreadystatechange = function () {
-        if(search.readyState == 4 && search.status == 200) {
-            var return_data = search.responseText;
-            console.log(return_data);
-            
-            var obj = JSON.parse(return_data);
-            
-            console.log("Title = " + obj.Title);
-            console.log("Year = " + obj.Year);
-            console.log("Poster - " + obj.Poster);
-            
-            //document.getElementById("result").innerHTML = preitem + "<br><br>" + "<img id=\"\" src=\"" + obj.Poster + "\">" + "<br><br>" + return_data;
-            
-            var add = new Film(preitem);
-            add.init();
-        }
-    }
-        search.send(vars);
-    
 } 
 
 function Film (name) {
