@@ -25,13 +25,13 @@ function run() {
     }  
 } 
 
-function format(film) {
-        film.style.width = "100%";
-        film.style.height = "20%";
-        film.style.border = "red solid 2px";
-        film.style.paddingLeft = "10%";
-        film.style.textAlign = "left";
-        film.style.paddingTop = "1%";    
+function format(a) {
+        a.style.width = "100%";
+        a.style.height = "20%";
+        a.style.border = "red solid 2px";
+        a.style.paddingLeft = "10%";
+        a.style.textAlign = "left";
+        a.style.paddingTop = "1%";    
 }
 
 function Film (name) {
